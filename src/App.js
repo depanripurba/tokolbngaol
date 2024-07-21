@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import Header from "./component/header";
+import Aside from "./component/aside";
+import Footer from "./component/footer";
+import Kontrolside from "./component/kontrolside";
+import Home from "./pages/home";
+import Stok from "./pages/stok";
 function App() {
+
+useEffect(()=>{
+  console.log(id)
+})
+const { id } = useParams();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+      {console.log(id)}
     </div>
+      <BrowserRouter>
+        <Header />
+        <Aside />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/stok" element={<Stok />} />
+        </Routes>
+        <Kontrolside />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
