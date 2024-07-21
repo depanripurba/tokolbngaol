@@ -69,6 +69,15 @@ function Aside() {
                 </p>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/gudang" className="nav-link">
+                <i className="nav-icon fas fa-th" />
+                <p>
+                  Gudang
+                  <span className="right badge badge-danger">New</span>
+                </p>
+              </Link>
+            </li>
           </ul>
         </nav>
         {/* /.sidebar-menu */}

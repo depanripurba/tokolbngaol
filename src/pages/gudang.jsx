@@ -1,8 +1,8 @@
 import Top from "../component/top";
-function Home() {
+function Gudang() {
   return (
     <div className="content-wrapper">
-      <Top judul="Dashboard" />
+      <Top judul="Gudang" />
       {/* Main content */}
       <div className="content">
         <div className="row">
@@ -39,6 +39,23 @@ function Home() {
               </a>
             </div>
           </div>
+          {/* ./col */}
+          <div className="col-lg-3 col-6">
+            {/* small box */}
+            <div className="small-box bg-warning">
+              <div className="inner">
+                <h3>44</h3>
+                <p>User Registrations</p>
+              </div>
+              <div className="icon">
+                <i className="ion ion-person-add" />
+              </div>
+              <a href="#" className="small-box-footer">
+                More info <i className="fas fa-arrow-circle-right" />
+              </a>
+            </div>
+          </div>
+          {/* ./col */}
           <div className="col-lg-3 col-6">
             {/* small box */}
             <div className="small-box bg-danger">
@@ -62,4 +79,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Gudang;
