@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-function Aside() {
+function Aside(props) {
+  let dashboard = props.aktif = "dasboard"?"active":""
+  let stok = props.aktif = "stok"?"active":""
+  let billing = props.aktif = "billing"?"active":""
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
       {/* Brand Logo */}
@@ -43,7 +46,7 @@ function Aside() {
             {/* Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library */}
             <li className="nav-item menu-open">
-              <Link to="/" className="nav-link active">
+              <Link to="/" className={"nav-link "+dashboard}>
                 <i className="nav-icon fas fa-tachometer-alt" />
                 <p>
                   Dashboard
@@ -52,7 +55,7 @@ function Aside() {
               
             </li>
             <li className="nav-item">
-              <Link to="/stok" className="nav-link">
+              <Link to="/stok" className={"nav-link "+stok}>
                 <i className="nav-icon fas fa-th" />
                 <p>
                   Stok
@@ -61,7 +64,7 @@ function Aside() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/billing" className="nav-link">
+              <Link to="/billing" className={"nav-link "+billing}>
                 <i className="nav-icon fas fa-th" />
                 <p>
                   Billing
