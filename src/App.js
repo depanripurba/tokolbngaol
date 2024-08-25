@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./component/header";
 import Aside from "./component/aside";
 import Footer from "./component/footer";
@@ -14,9 +14,9 @@ function App() {
         <Header />
         <Aside />
         <Routes>
-          <Route path="/" element={<Home aktif="dashboard" />} />
-          <Route path="/stok" element={<Stok aktif="stok" />} />
-          <Route path="/billing" element={<Billing aktif="billing"/>} />
+          <Route path="/" element={<Home tes={"tes"} />} />
+          <Route path="/stok" element={<Stok/>} />
+          <Route path="/billing" element={<Billing/>} />
           <Route path="*" element={<Notfound />} />
         </Routes>
         <Kontrolside />
